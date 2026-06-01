@@ -1,0 +1,7 @@
+export const navLinks = [
+  { title: "Home", href: "#top" },
+  { title: "About me", href: "#about" },
+  { title: "Services", href: "#services" },
+  { title: "My Work", href: "#work" },
+  { title: "Contact Me", href: "#contact" },
+];
