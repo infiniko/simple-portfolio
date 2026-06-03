@@ -6,6 +6,7 @@
 
 @theme inline {
   --font-heading: var(--font-sans);
+  --font-bricolage: var(--font-bricolage);
   --font-sans: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -45,6 +46,8 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  --color-card-highlight: var(--cardHighlightColor);
+  --color-card-shadow-hov: var(--card-shadow);
 }
 
 :root {
@@ -80,6 +83,8 @@
   --sidebar-ring: oklch(0.711 0.019 323.02);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0.008 326);
+  --cardHighlightColor: #fffbfe;
+  --card-shadow: rgba(41, 16, 13, 0.12);
 }
 
 .dark {
@@ -114,6 +119,8 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.542 0.034 322.5);
+  --cardHighlightColor: #2a1f2b;
+  --card-shadow: rgba(43, 13, 48, 0.02);
 }
 
 @layer base {
@@ -126,4 +133,42 @@
   html {
     @apply font-sans;
   }
+}
+
+@keyframes navbar-blur {
+  0% {
+    background: transparent;
+    backdrop-filter: blur(0px);
+    border-bottom: 1px solid transparent;
+    box-shadow: none;
+  }
+  100% {
+    background: hsl(var(--background) / 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid hsl(var(--border) / 0.5);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.navbar-scroll {
+  animation: navbar-blur linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 50px;
+}
+
+@keyframes menu-shadow {
+  0% {
+    box-shadow:
+      0 1px 3px 0 rgb(0 0 0 / 0.1),
+      0 1px 2px -1px rgb(0 0 0 / 0.1);
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+
+.menu-scroll {
+  animation: menu-shadow linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 50px;
 }

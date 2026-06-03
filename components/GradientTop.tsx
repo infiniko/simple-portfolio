@@ -1,10 +1,10 @@
 const GradientTop = () => {
   return (
     <div
-      className="absolute top-0 right-0 w-full h-[70vh] -z-10 translate-y-[-60%] overflow-hidden pointer-events-none"
+      className="absolute top-0 right-0 w-full h-[70vh] -z-10 translate-y-[-55%] overflow-hidden pointer-events-none"
       style={{
         maskImage:
-          "radial-gradient(ellipse at center, black 30%, transparent 70%)",
+          "radial-gradient(ellipse at center, black 30%, transparent 50%)",
       }}
     >
       <div

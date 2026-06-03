@@ -8,7 +8,6 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import { navLinks } from "@/data";
@@ -17,14 +16,16 @@ import { ThemeToggle } from "./ThemeToggle";
 import { ArrowSquareInIcon, SquareHalfIcon } from "@phosphor-icons/react";
 import GradientTop from "./GradientTop";
 import { RightSideDrop } from "./RightSideDrop";
+import { useEffect } from "react";
 
 const Navbar = () => {
+  useEffect(() => {}, []);
   return (
     <>
       <nav>
         <GradientTop />
         <NavigationMenu>
-          <NavigationMenuList className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-3 flex items-center justify-between z-50">
+          <NavigationMenuList className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-3 flex items-center justify-between z-50 navbar-scroll">
             <NavigationMenuItem>
               <Link href="#top">
                 <Image
@@ -34,7 +35,7 @@ const Navbar = () => {
                 />
               </Link>
             </NavigationMenuItem>
-            <NavigationMenuItem className="hidden md:flex items-center gap-8 lg:gap-8 rounded-full px-12 py-2 shadow-sm">
+            <NavigationMenuItem className="hidden md:flex items-center gap-8 lg:gap-8 rounded-full px-12 py-1 menu-scroll">
               {navLinks.map(({ title, href }) => {
                 return (
                   <NavigationMenuLink key={title} asChild className="">
