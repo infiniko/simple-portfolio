@@ -48,6 +48,17 @@
   --radius-4xl: calc(var(--radius) * 2.6);
   --color-card-highlight: var(--cardHighlightColor);
   --color-card-shadow-hov: var(--card-shadow);
+  @keyframes liquid-drift {
+  0% {
+    background-position: 0% 0%, 100% 100%, 0% 0%;
+    }
+  50% {
+    background-position: 30% 20%, 70% 80%, 0% 0%;
+    }
+  100% {
+    background-position: 0% 0%, 100% 100%, 0% 0%;
+    }
+  }
 }
 
 :root {

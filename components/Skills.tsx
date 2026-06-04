@@ -1,9 +1,8 @@
 "use client";
 import { skillSet } from "@/data";
 import React from "react";
-import GlassCard from "./aicanvas/glass-card";
 import SkillCard from "./SkillCard";
-import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   return (

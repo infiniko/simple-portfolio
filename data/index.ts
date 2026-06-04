@@ -10,7 +10,7 @@ export const navLinks = [
   { title: "Home", href: "/#top" },
   { title: "About me", href: "/#about" },
   { title: "Skills", href: "/#skills" },
-  { title: "My Work", href: "/#work" },
+  { title: "Projects", href: "/#projects" },
   { title: "Contact Me", href: "/#contact" },
 ];
 

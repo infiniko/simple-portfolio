@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 
 import React from "react";
+import { GlassCard } from "./glass-card";
 
 const InfoCard = ({
   title,
@@ -20,13 +21,16 @@ const InfoCard = ({
   children: React.ReactNode;
 }) => {
   return (
-    <Card className="cursor-pointer hover:bg-card-highlight hover:-translate-y-2 duration-500 hover:shadow-2xl hover:shadow-card-shadow-hov">
+    <GlassCard
+      glassVariant="frosted"
+      className="cursor-pointer hover:bg-card-highlight hover:-translate-y-2 duration-500 hover:shadow-2xl hover:shadow-card-shadow-hov"
+    >
       <CardContent>{children}</CardContent>
       <CardHeader>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-    </Card>
+    </GlassCard>
   );
 };
 

@@ -17,6 +17,7 @@ import { ArrowSquareInIcon, SquareHalfIcon } from "@phosphor-icons/react";
 import GradientTop from "./GradientTop";
 import { RightSideDrop } from "./RightSideDrop";
 import { useEffect } from "react";
+import { GlassButton } from "./glass-button";
 
 const Navbar = () => {
   useEffect(() => {}, []);
@@ -46,7 +47,10 @@ const Navbar = () => {
             </NavigationMenuItem>
             <NavigationMenuItem className="flex gap-2">
               <ThemeToggle />
-              <Button variant={"outline"} asChild className="hidden lg:flex">
+              <GlassButton
+                glassVariant="liquid-refract"
+                className="hidden lg:flex rounded-full"
+              >
                 <Link
                   className="items-center gap-3 px-10 py-2.5 rounded-full"
                   href="#contact"
@@ -54,7 +58,7 @@ const Navbar = () => {
                   Contact
                   <ArrowSquareInIcon size={32} weight="duotone" />
                 </Link>
-              </Button>
+              </GlassButton>
               <RightSideDrop>
                 <Button
                   variant="outline"
