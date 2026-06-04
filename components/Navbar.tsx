@@ -4,7 +4,6 @@ import { assets } from "@/assets/assets";
 
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
@@ -13,8 +12,7 @@ import Link from "next/link";
 import { navLinks } from "@/data";
 import { Button } from "./ui/button";
 import { ThemeToggle } from "./ThemeToggle";
-import { ArrowSquareInIcon, SquareHalfIcon } from "@phosphor-icons/react";
-import GradientTop from "./GradientTop";
+import { GithubLogoIcon, SquareHalfIcon } from "@phosphor-icons/react";
 import { RightSideDrop } from "./RightSideDrop";
 import { useEffect } from "react";
 import { GlassButton } from "./glass-button";
@@ -24,7 +22,6 @@ const Navbar = () => {
   return (
     <>
       <nav>
-        <GradientTop />
         <NavigationMenu>
           <NavigationMenuList className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-3 flex items-center justify-between z-50 navbar-scroll">
             <NavigationMenuItem>
@@ -49,14 +46,18 @@ const Navbar = () => {
               <ThemeToggle />
               <GlassButton
                 glassVariant="liquid-refract"
-                className="hidden lg:flex rounded-full"
+                className="hidden lg:flex"
               >
                 <Link
-                  className="items-center gap-3 px-10 py-2.5 rounded-full"
-                  href="#contact"
+                  className="flex items-center justify-center gap-2 px-2 mt-1 group/github"
+                  href="/"
                 >
-                  Contact
-                  <ArrowSquareInIcon size={32} weight="duotone" />
+                  Github
+                  <GithubLogoIcon
+                    size={32}
+                    weight="duotone"
+                    className="transition-transform duration-500 group-hover/github:scale-125"
+                  />
                 </Link>
               </GlassButton>
               <RightSideDrop>

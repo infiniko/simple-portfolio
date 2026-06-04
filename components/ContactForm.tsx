@@ -6,6 +6,7 @@ import { Textarea } from "./ui/textarea";
 import { GlassCard } from "./glass-card";
 import { CardContent } from "./ui/card";
 import { GlassButton } from "./glass-button";
+import { ArrowRightIcon } from "@phosphor-icons/react";
 
 export function ContactForm() {
   const [result, setResult] = useState("");
@@ -71,8 +72,17 @@ export function ContactForm() {
               />
             </Field>
             <Field orientation="horizontal">
-              <GlassButton glassVariant="liquid" type="submit">
+              <GlassButton
+                glassVariant="liquid"
+                type="submit"
+                className="rounded-full flex gap-2 group/submit hover:scale-110"
+              >
                 Submit
+                <ArrowRightIcon
+                  size={32}
+                  weight="bold"
+                  className="group-hover/submit:translate-x-1 duration-500"
+                />
               </GlassButton>
             </Field>
           </FieldGroup>

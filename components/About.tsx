@@ -2,6 +2,7 @@ import { assets, infoList, toolsData } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
 import InfoCard from "./InfoCard";
+import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 
 const About = () => {
   return (
@@ -51,6 +52,26 @@ const About = () => {
           </ul>
         </div>
       </div>
+      <BentoGrid>
+        <BentoGridItem
+          title="The Power of Collaboration"
+          description="Enable real-time collaboration with your team."
+          containerClassName="md:col-span-2"
+          header={
+            <div className="h-full w-full rounded-xl bg-neutral-100 dark:bg-neutral-800" />
+          }
+          // icon={<Users className="h-4 w-4 text-neutral-500" />}
+        />
+        <BentoGridItem
+          title="Smart Automation"
+          description="Automate repetitive tasks and focus on what matters."
+          containerClassName="md:col-span-1"
+          header={
+            <div className="h-full w-full rounded-xl bg-neutral-100 dark:bg-neutral-800" />
+          }
+          // icon={<Zap className="h-4 w-4 text-neutral-500" />}
+        />
+      </BentoGrid>
     </div>
   );
 };

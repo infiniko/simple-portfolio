@@ -49,14 +49,23 @@
   --color-card-highlight: var(--cardHighlightColor);
   --color-card-shadow-hov: var(--card-shadow);
   @keyframes liquid-drift {
-  0% {
-    background-position: 0% 0%, 100% 100%, 0% 0%;
+    0% {
+      background-position:
+        0% 0%,
+        100% 100%,
+        0% 0%;
     }
-  50% {
-    background-position: 30% 20%, 70% 80%, 0% 0%;
+    50% {
+      background-position:
+        30% 20%,
+        70% 80%,
+        0% 0%;
     }
-  100% {
-    background-position: 0% 0%, 100% 100%, 0% 0%;
+    100% {
+      background-position:
+        0% 0%,
+        100% 100%,
+        0% 0%;
     }
   }
 }
@@ -154,7 +163,7 @@
     box-shadow: none;
   }
   100% {
-    background: hsl(var(--background) / 0.8);
+    background: hsl(var(--background) / 0.1);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid hsl(var(--border) / 0.5);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
@@ -182,4 +191,10 @@
   animation: menu-shadow linear both;
   animation-timeline: scroll();
   animation-range: 0px 50px;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }

@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="flex flex-col items-center w-full px-[12%] py-10 scroll-mt-20 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-size-[90%_auto]"
+      className="flex flex-col items-center w-full px-[12%] py-10 scroll-mt-20"
     >
       <h4 className="text-center mb-2 text-lg font-bricolage">
         Connect with me

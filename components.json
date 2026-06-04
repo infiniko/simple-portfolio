@@ -23,6 +23,8 @@
   },
   "registries": {
     "@aicanvas": "https://aicanvas.me/r/{name}.json",
-    "@glasscn": "https://glasscn-components.vercel.app/r/{name}.json"
+    "@glasscn": "https://glasscn-components.vercel.app/r/{name}.json",
+    "@magicui": "https://magicui.design/r/{name}",
+    "@scrollxui": "https://www.scrollxui.dev/registry/{name}.json"
   }
 }
