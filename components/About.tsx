@@ -4,6 +4,18 @@ import Image from "next/image";
 import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 import { motion } from "framer-motion";
 import { headingVariant, introVariant, paraVariant } from "@/data/variants";
+import { MeteorOrbit } from "@/components/ui/meteor-orbit";
+import {
+  BinaryIcon,
+  CalendarStarIcon,
+  CodeIcon,
+  DevToLogoIcon,
+  GraphIcon,
+  PackageIcon,
+  StackOverflowLogoIcon,
+  TerminalWindowIcon,
+  TreeStructureIcon,
+} from "@phosphor-icons/react";
 
 const About = () => {
   return (
@@ -35,82 +47,123 @@ const About = () => {
             className="w-full rounded-3xl "
           />
         </div>
-        <div className="flex-1">
-          <motion.p
-            className="mb-10 max-w-2xl font-bricolage"
-            variants={paraVariant}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.3 }}
-          >
-            Frontend Developer with 4+ years of experience specializing in
-            React, Next.js, and TypeScript. I've helped reduce load times,
-            streamline developer workflows, and build component libraries that
-            accelerate entire teams. Whether it's architecting state management
-            systems or mentoring peers, I bring both technical depth and a
-            collaborative mindset to every project.
-          </motion.p>
-
-          <div className="grid grid-cols-1 max-w-2xl">
-            <BentoGrid>
-              <BentoGridItem
-                title="The Power of Collaboration"
-                description={""}
-                containerClassName="md:col-span-1"
-              />
-              <BentoGridItem
-                title="Smart Automation"
-                description="dada"
-                containerClassName="md:col-span-1"
-              />
-              <BentoGridItem
-                title="The Power of Collaboration"
-                description="Enable real-time collaboration with your team."
-                containerClassName="md:col-span-1"
-              />
-            </BentoGrid>
-          </div>
-        </div>
       </div>
-      <div className="">
-        <BentoGrid className="md:grid-cols-6">
+      <div>
+        <BentoGrid className="md:grid-cols-4 lg:grid-cols-6">
           <BentoGridItem
             title="The Power of Collaboration"
             description={""}
-            containerClassName="md:col-span-2 md:row-span-2"
+            containerClassName="md:col-span-2 lg:col-span-2 md:row-span-2 lg:row-span-2"
           />
           <BentoGridItem
-            title=""
+            title="About"
             description=""
             header={
-              <div className="py-10 px-4 w-full h-fit bg-amber-300">
+              <div className="md:mt-1 lg:mt-2 xl:mt-4 px-4 w-full h-full overflow-hidden text-ellipsis lg:text-clip ...">
                 <span className="text-primary tracking-wider font-bold">
                   Frontend Developer
-                </span>{" "}
-                with 4+ years of experience specializing in React, Next.js, and
-                TypeScript. I've helped reduce load times, streamline developer
-                workflows, and build component libraries that accelerate entire
-                teams. Whether it's architecting state management systems or
-                mentoring peers, I bring both technical depth and a
-                collaborative mindset to every project.
+                </span>
+                <span className="text-balance">
+                  {" "}
+                  with 4+ years of experience specializing in React, Next.js,
+                  and TypeScript. I've helped reduce load times, streamline
+                  developer workflows, and build component libraries that
+                  accelerate entire teams. Whether it's architecting state
+                  management systems or mentoring peers, I bring both technical
+                  depth and a collaborative mindset to every project.
+                </span>
               </div>
             }
-            containerClassName="md:col-span-4"
+            containerClassName="md:col-span-2 lg:col-span-4"
+          />
+          <BentoGridItem
+            title="years of experience"
+            icon={<CalendarStarIcon size={32} />}
+            header={
+              <div className="mt-10 text-center text-7xl text-primary font-bricolage font-semibold">
+                4+
+              </div>
+            }
+            containerClassName="md:col-span-2 lg:col-span-1"
           />
           <BentoGridItem
             title="The Power of Collaboration"
             description="Enable real-time collaboration with your team."
-            containerClassName="md:col-span-1"
+            containerClassName="md:col-span-2 lg:col-span-1"
           />
           <BentoGridItem
-            title="The Power of Collaboration"
-            description="Enable real-time collaboration with your team."
-            containerClassName="md:col-span-1"
-          />
-          <BentoGridItem
-            title="The Power of Collaboration"
-            description="Enable real-time collaboration with your team."
-            containerClassName="md:col-span-2"
+            containerClassName=" md:col-span-2"
+            title="Skills"
+            header={
+              <div className="w-full h-full rounded-2xl overflow-hidden">
+                <div className="absolute inset-0 overflow-hidden rounded-2xl">
+                  <div className="absolute bottom-0 right-0 translate-x-5 translate-y-5">
+                    <div className="relative origin-bottom-right scale-100 translate-x-[20%] translate-y-[43%]">
+                      <MeteorOrbit
+                        meteorSpeed={1}
+                        meteorGradients={[
+                          ["#c60036", "#eb384d"],
+                          ["#14b8a6", "#06b6d4"],
+                          ["#a855f7", "#ec4899"],
+                          ["#c60036", "#ff6b35"],
+                        ]}
+                        rippleCount={4}
+                        icons={[
+                          {
+                            icon: (
+                              <StackOverflowLogoIcon
+                                size={20}
+                                weight="duotone"
+                              />
+                            ),
+                            orbitIndex: 1,
+                            position: 350,
+                          },
+                          {
+                            icon: <DevToLogoIcon size={20} weight="duotone" />,
+                            orbitIndex: 3,
+                            position: 300,
+                          },
+                          {
+                            icon: <GraphIcon size={20} weight="duotone" />,
+                            orbitIndex: 2,
+                            position: 235,
+                          },
+                          {
+                            icon: (
+                              <TreeStructureIcon size={20} weight="duotone" />
+                            ),
+                            orbitIndex: 3,
+                            position: 265,
+                          },
+                          {
+                            icon: (
+                              <TerminalWindowIcon size={20} weight="duotone" />
+                            ),
+                            orbitIndex: 1,
+                            position: 190,
+                          },
+                          {
+                            icon: <BinaryIcon size={20} weight="duotone" />,
+                            orbitIndex: 3,
+                            position: 210,
+                          },
+                          {
+                            icon: <PackageIcon size={20} weight="duotone" />,
+                            orbitIndex: 1,
+                            position: 270,
+                          },
+                        ]}
+                      >
+                        <div className="flex items-center justify-center w-16 h-16 rounded-full">
+                          <CodeIcon size={20} weight="duotone" />
+                        </div>
+                      </MeteorOrbit>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            }
           />
         </BentoGrid>
       </div>

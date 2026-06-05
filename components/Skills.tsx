@@ -3,6 +3,7 @@ import { skillSet } from "@/data";
 import SkillCard from "./SkillCard";
 import { motion, Variants } from "framer-motion";
 import { headingVariant, introVariant, paraVariant } from "@/data/variants";
+import { StripedPattern } from "./magicui/striped-pattern";
 
 const cardContainer: Variants = {
   hidden: {},
@@ -29,7 +30,11 @@ const cardVariant: Variants = {
 
 const Skills = () => {
   return (
-    <div id="skills" className="w-full px-[12%] py-10 scroll-mt-20">
+    <div id="skills" className="relative w-full px-[12%] py-10 scroll-mt-20">
+      <StripedPattern
+        className="-z-20 opacity-35 text-[#a50036]"
+        direction="right"
+      />
       <motion.h4
         variants={introVariant}
         className="text-center mb-2 text-lg font-bricolage"

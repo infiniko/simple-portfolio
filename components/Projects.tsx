@@ -15,7 +15,7 @@ const Projects = () => {
       id="projects"
       className="relative w-full px-[12%] py-10 scroll-mt-20 overflow-hidden"
     >
-      <StripedPattern className="-z-20 opacity-25 text-[#a50036]" />
+      <StripedPattern className="-z-20 opacity-35 text-[#a50036]" />
       <motion.h4
         variants={introVariant}
         className="text-center mb-2 text-lg font-bricolage"
@@ -49,7 +49,7 @@ const Projects = () => {
           return (
             <article key={index} className="group relative">
               <GlassCard
-                glassVariant="frosted"
+                glassVariant="clear"
                 className="transform group-hover:shadow-xl transition-shadow duration-500 p-0"
               >
                 <CardContent className="p-0">

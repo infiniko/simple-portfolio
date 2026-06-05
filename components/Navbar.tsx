@@ -49,7 +49,7 @@ const Navbar = () => {
             <NavigationMenuItem className="flex gap-2">
               <ThemeToggle />
               <div className="hidden lg:flex">
-                <GlassButton glassVariant="liquid-refract" className="">
+                <GlassButton glassVariant="liquid-refract">
                   <Link
                     className="flex items-center justify-center gap-2 px-2 mt-1 group/github"
                     href="/"
@@ -64,16 +64,16 @@ const Navbar = () => {
                 </GlassButton>
               </div>
               <RightSideDrop>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="flex md:hidden"
+                <GlassButton
+                  glassVariant="liquid-refract"
+                  size="icon-lg"
+                  className="flex md:hidden rounded-full"
                 >
                   <SquareHalfIcon
                     weight="duotone"
                     className="h-[1.2rem] w-[1.2rem]"
                   />
-                </Button>
+                </GlassButton>
               </RightSideDrop>
             </NavigationMenuItem>
           </NavigationMenuList>

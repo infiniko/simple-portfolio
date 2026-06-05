@@ -13,8 +13,8 @@ const SkillCard = ({
 }) => {
   return (
     <GlassCard
-      glassVariant="frosted"
-      className="hover:shadow-sm hover:bg-card-highlight hover:-translate-y-1 duration-500"
+      glassVariant="clear"
+      className="hover:shadow-sm hover:-translate-y-1 duration-500"
     >
       <CardHeader>
         <CardTitle className="font-bricolage text-2xl">{title}</CardTitle>
