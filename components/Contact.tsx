@@ -1,4 +1,7 @@
+"use client";
+import { headingVariant, introVariant } from "@/data/variants";
 import { ContactForm } from "./ContactForm";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
@@ -6,14 +9,24 @@ const Contact = () => {
       id="contact"
       className="flex flex-col items-center w-full px-[12%] py-10 scroll-mt-20"
     >
-      <h4 className="text-center mb-2 text-lg font-bricolage">
+      <motion.h4
+        variants={introVariant}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        className="text-center mb-2 text-lg font-bricolage"
+      >
         Connect with me
-      </h4>
-      <h2 className="text-center text-5xl font-bricolage">Contract</h2>
-      <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-bricolage">
-        A perfect blend of frontend,backend, cloud, data, and architecture
-        skills
-      </p>
+      </motion.h4>
+      <motion.h2
+        variants={headingVariant}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        className="text-center text-5xl font-bricolage mb-12"
+      >
+        Contract
+      </motion.h2>
 
       <ContactForm />
     </div>

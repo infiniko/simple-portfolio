@@ -12,7 +12,6 @@ const SkillCard = ({
   entries: string[];
 }) => {
   return (
-    // <GlassCard className="hover:shadow-sm hover:bg-card-highlight hover:-translate-y-1 duration-500">
     <GlassCard
       glassVariant="frosted"
       className="hover:shadow-sm hover:bg-card-highlight hover:-translate-y-1 duration-500"
@@ -22,10 +21,13 @@ const SkillCard = ({
       </CardHeader>
       <CardContent>
         <div>{children}</div>
-        {/* <div className="flex gap-x-2 py-2 flex-wrap justify-start px-2 mt-2 min-h-24"> */}
         <div className="flex gap-x-2 flex-wrap mt-2 min-h-20 align-bottom">
           {entries.map((entry) => (
-            <GlassBadge glassVariant="frosted" className="px-4" key={entry}>
+            <GlassBadge
+              glassVariant="subtle"
+              className="px-4 transition-all duration-500 ease-out hover:scale-105 hover:-translate-y-1"
+              key={entry}
+            >
               {entry}
             </GlassBadge>
           ))}

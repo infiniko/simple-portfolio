@@ -1,16 +1,33 @@
-import { assets, infoList, toolsData } from "@/assets/assets";
+"use client";
+import { assets } from "@/assets/assets";
 import Image from "next/image";
-import React from "react";
-import InfoCard from "./InfoCard";
 import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
+import { motion } from "framer-motion";
+import { headingVariant, introVariant, paraVariant } from "@/data/variants";
 
 const About = () => {
   return (
     <div id="about" className="w-full px-[12%] py-10 scroll-mt-20">
-      <h4 className="text-center mb-2 text-lg font-bricolage">Introduction</h4>
-      <h2 className="text-center text-5xl font-bricolage">About me</h2>
+      <motion.h4
+        className="text-center mb-2 text-lg font-bricolage"
+        variants={introVariant}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.5 }}
+      >
+        Introduction
+      </motion.h4>
+      <motion.h2
+        className="text-center text-5xl font-bricolage"
+        variants={headingVariant}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.5 }}
+      >
+        About me
+      </motion.h2>
 
-      <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+      <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-15">
         <div className="w-64 sm:w-80 rounded-3xl max-w-none">
           <Image
             src={assets.user_image}
@@ -19,59 +36,84 @@ const About = () => {
           />
         </div>
         <div className="flex-1">
-          <p className="mb-10 max-w-2xl font-bricolage">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque sequi
-            assumenda placeat recusandae aut iste perferendis amet temporibus
-            hic nisi, reiciendis dolores praesentium dignissimos voluptatibus
-            nulla cumque, nesciunt est ea.
-          </p>
+          <motion.p
+            className="mb-10 max-w-2xl font-bricolage"
+            variants={paraVariant}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.3 }}
+          >
+            Frontend Developer with 4+ years of experience specializing in
+            React, Next.js, and TypeScript. I've helped reduce load times,
+            streamline developer workflows, and build component libraries that
+            accelerate entire teams. Whether it's architecting state management
+            systems or mentoring peers, I bring both technical depth and a
+            collaborative mindset to every project.
+          </motion.p>
 
-          <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
-            {infoList.map(({ icon, iconDark, title, description }, index) => {
-              return (
-                <InfoCard title={title} description={description} key={index}>
-                  <Image src={icon} alt={title} className="w-7 mt-3" />
-                </InfoCard>
-              );
-            })}
-          </ul>
-
-          <h4 className="my-6 text-gray-700 font-bricolage">Tools I use</h4>
-
-          <ul className="flex items-center gap-3 sm:gap-5">
-            {toolsData.map((tool, index) => {
-              return (
-                <li
-                  key={index}
-                  className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-secondary rounded-lg cursor-pointer hover:-translate-y-1 duration-500"
-                >
-                  <Image src={tool} alt="tool" className="w-5 sm:w-7" />
-                </li>
-              );
-            })}
-          </ul>
+          <div className="grid grid-cols-1 max-w-2xl">
+            <BentoGrid>
+              <BentoGridItem
+                title="The Power of Collaboration"
+                description={""}
+                containerClassName="md:col-span-1"
+              />
+              <BentoGridItem
+                title="Smart Automation"
+                description="dada"
+                containerClassName="md:col-span-1"
+              />
+              <BentoGridItem
+                title="The Power of Collaboration"
+                description="Enable real-time collaboration with your team."
+                containerClassName="md:col-span-1"
+              />
+            </BentoGrid>
+          </div>
         </div>
       </div>
-      <BentoGrid>
-        <BentoGridItem
-          title="The Power of Collaboration"
-          description="Enable real-time collaboration with your team."
-          containerClassName="md:col-span-2"
-          header={
-            <div className="h-full w-full rounded-xl bg-neutral-100 dark:bg-neutral-800" />
-          }
-          // icon={<Users className="h-4 w-4 text-neutral-500" />}
-        />
-        <BentoGridItem
-          title="Smart Automation"
-          description="Automate repetitive tasks and focus on what matters."
-          containerClassName="md:col-span-1"
-          header={
-            <div className="h-full w-full rounded-xl bg-neutral-100 dark:bg-neutral-800" />
-          }
-          // icon={<Zap className="h-4 w-4 text-neutral-500" />}
-        />
-      </BentoGrid>
+      <div className="">
+        <BentoGrid className="md:grid-cols-6">
+          <BentoGridItem
+            title="The Power of Collaboration"
+            description={""}
+            containerClassName="md:col-span-2 md:row-span-2"
+          />
+          <BentoGridItem
+            title=""
+            description=""
+            header={
+              <div className="py-10 px-4 w-full h-fit bg-amber-300">
+                <span className="text-primary tracking-wider font-bold">
+                  Frontend Developer
+                </span>{" "}
+                with 4+ years of experience specializing in React, Next.js, and
+                TypeScript. I've helped reduce load times, streamline developer
+                workflows, and build component libraries that accelerate entire
+                teams. Whether it's architecting state management systems or
+                mentoring peers, I bring both technical depth and a
+                collaborative mindset to every project.
+              </div>
+            }
+            containerClassName="md:col-span-4"
+          />
+          <BentoGridItem
+            title="The Power of Collaboration"
+            description="Enable real-time collaboration with your team."
+            containerClassName="md:col-span-1"
+          />
+          <BentoGridItem
+            title="The Power of Collaboration"
+            description="Enable real-time collaboration with your team."
+            containerClassName="md:col-span-1"
+          />
+          <BentoGridItem
+            title="The Power of Collaboration"
+            description="Enable real-time collaboration with your team."
+            containerClassName="md:col-span-2"
+          />
+        </BentoGrid>
+      </div>
     </div>
   );
 };

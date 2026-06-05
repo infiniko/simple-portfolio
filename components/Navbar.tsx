@@ -36,7 +36,11 @@ const Navbar = () => {
             <NavigationMenuItem className="hidden md:flex items-center gap-8 lg:gap-8 rounded-full px-12 py-1 menu-scroll">
               {navLinks.map(({ title, href }) => {
                 return (
-                  <NavigationMenuLink key={title} asChild className="">
+                  <NavigationMenuLink
+                    key={title}
+                    asChild
+                    className="not-dark:hover:bg-primary-foreground duration-300"
+                  >
                     <Link href={href}>{title}</Link>
                   </NavigationMenuLink>
                 );
@@ -44,22 +48,21 @@ const Navbar = () => {
             </NavigationMenuItem>
             <NavigationMenuItem className="flex gap-2">
               <ThemeToggle />
-              <GlassButton
-                glassVariant="liquid-refract"
-                className="hidden lg:flex"
-              >
-                <Link
-                  className="flex items-center justify-center gap-2 px-2 mt-1 group/github"
-                  href="/"
-                >
-                  Github
-                  <GithubLogoIcon
-                    size={32}
-                    weight="duotone"
-                    className="transition-transform duration-500 group-hover/github:scale-125"
-                  />
-                </Link>
-              </GlassButton>
+              <div className="hidden lg:flex">
+                <GlassButton glassVariant="liquid-refract" className="">
+                  <Link
+                    className="flex items-center justify-center gap-2 px-2 mt-1 group/github"
+                    href="/"
+                  >
+                    Github
+                    <GithubLogoIcon
+                      size={32}
+                      weight="duotone"
+                      className="transition-transform duration-500 group-hover/github:scale-125"
+                    />
+                  </Link>
+                </GlassButton>
+              </div>
               <RightSideDrop>
                 <Button
                   variant="outline"

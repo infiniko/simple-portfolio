@@ -5,15 +5,44 @@ import { CardContent, CardHeader, CardTitle } from "./ui/card";
 import Image from "next/image";
 import { GlassButton } from "./glass-button";
 import { ArrowSquareUpRightIcon } from "@phosphor-icons/react";
+import { motion } from "framer-motion";
+import { headingVariant, introVariant, paraVariant } from "@/data/variants";
+import { StripedPattern } from "./magicui/striped-pattern";
 
 const Projects = () => {
   return (
-    <div id="projects" className="w-full px-[12%] py-10 scroll-mt-20">
-      <h4 className="text-center mb-2 text-lg font-bricolage">work on</h4>
-      <h2 className="text-center text-5xl font-bricolage">Projects</h2>
-      <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-bricolage">
+    <div
+      id="projects"
+      className="relative w-full px-[12%] py-10 scroll-mt-20 overflow-hidden"
+    >
+      <StripedPattern className="-z-20 opacity-25 text-[#a50036]" />
+      <motion.h4
+        variants={introVariant}
+        className="text-center mb-2 text-lg font-bricolage"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        work on
+      </motion.h4>
+      <motion.h2
+        variants={headingVariant}
+        className="text-center text-5xl font-bricolage"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        Projects
+      </motion.h2>
+      <motion.p
+        variants={paraVariant}
+        className="text-center max-w-2xl mx-auto mt-5 mb-12 font-bricolage"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         Explore a collection of projects
-      </p>
+      </motion.p>
 
       <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2 my-10">
         {workData.map((project, index) => {

@@ -53,7 +53,7 @@ export const skillSet = [
     icon: ToolboxIcon,
     color: "#FF7B54",
     gradient: "#FF7B54, #FFBE0B",
-    entries: ["Git", "npm", "Vite", "GraphQL"],
+    entries: ["Git", "npm", "Vite", "GraphQL", "Figma"],
   },
   {
     id: 6,
@@ -68,5 +68,23 @@ export const skillSet = [
       "Performance optimization",
       "Security",
     ],
+  },
+];
+
+export const aboutMe = [
+  {
+    id: 1,
+    title: "Interests",
+    description: ["UI/UX Design", "Gaming", "Travelling", "Music"],
+  },
+  {
+    id: 2,
+    title: "Projects",
+    description: "7",
+  },
+  {
+    id: 3,
+    title: "Years of Experience",
+    description: "4+",
   },
 ];
