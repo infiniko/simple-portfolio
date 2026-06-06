@@ -15,7 +15,7 @@ const Projects = () => {
       id="projects"
       className="relative w-full px-[12%] py-10 scroll-mt-20 overflow-hidden"
     >
-      <StripedPattern className="-z-20 opacity-35 text-[#a50036]" />
+      <StripedPattern className="-z-20 opacity-35 dark:opacity-50 text-[#6c185a]" />
       <motion.h4
         variants={introVariant}
         className="text-center mb-2 text-lg font-bricolage"
@@ -70,12 +70,28 @@ const Projects = () => {
                     <p>{project.description}</p>
                   </CardContent>
                 </CardHeader>
-                <GlassCardFooter>
+                <GlassCardFooter className="flex gap-2">
                   <GlassButton
-                    glassVariant="liquid-refract"
-                    className="rounded-full hover:scale-105 transition-transform duration-500"
+                    glassVariant="liquid"
+                    className="rounded-full hover:scale-105 transition-transform duration-500 group/open"
                   >
-                    Open <ArrowSquareUpRightIcon size={24} weight="bold" />
+                    Open{" "}
+                    <ArrowSquareUpRightIcon
+                      size={24}
+                      weight="bold"
+                      className="group-hover/open:translate-x-0.5 transition-transform duration-500"
+                    />
+                  </GlassButton>
+                  <GlassButton
+                    glassVariant="liquid"
+                    className="rounded-full hover:scale-105 transition-transform duration-500 group/open"
+                  >
+                    Source{" "}
+                    <ArrowSquareUpRightIcon
+                      size={24}
+                      weight="bold"
+                      className="group-hover/open:translate-x-0.5 transition-transform duration-500"
+                    />
                   </GlassButton>
                 </GlassCardFooter>
               </GlassCard>

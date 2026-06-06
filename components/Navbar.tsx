@@ -10,15 +10,12 @@ import {
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import { navLinks } from "@/data";
-import { Button } from "./ui/button";
 import { ThemeToggle } from "./ThemeToggle";
-import { GithubLogoIcon, SquareHalfIcon } from "@phosphor-icons/react";
+import { GithubLogoIcon } from "@phosphor-icons/react";
 import { RightSideDrop } from "./RightSideDrop";
-import { useEffect } from "react";
 import { GlassButton } from "./glass-button";
 
 const Navbar = () => {
-  useEffect(() => {}, []);
   return (
     <>
       <nav>
@@ -52,7 +49,8 @@ const Navbar = () => {
                 <GlassButton glassVariant="liquid-refract">
                   <Link
                     className="flex items-center justify-center gap-2 px-2 mt-1 group/github"
-                    href="/"
+                    target="_blank"
+                    href="https://github.com/infiniko/"
                   >
                     Github
                     <GithubLogoIcon
@@ -63,18 +61,9 @@ const Navbar = () => {
                   </Link>
                 </GlassButton>
               </div>
-              <RightSideDrop>
-                <GlassButton
-                  glassVariant="liquid-refract"
-                  size="icon-lg"
-                  className="flex md:hidden rounded-full"
-                >
-                  <SquareHalfIcon
-                    weight="duotone"
-                    className="h-[1.2rem] w-[1.2rem]"
-                  />
-                </GlassButton>
-              </RightSideDrop>
+              <div className="flex md:hidden">
+                <RightSideDrop />
+              </div>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>

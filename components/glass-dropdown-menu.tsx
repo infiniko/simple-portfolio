@@ -3,13 +3,18 @@
 import { Menu as MenuPrimitive } from "@base-ui/react/menu";
 import type * as React from "react";
 
-import { type FrostGlassVariantProp, glassVariantStyles } from "@/lib/glass-variants";
+import {
+  type FrostGlassVariantProp,
+  glassVariantStyles,
+} from "@/lib/glass-variants";
 import { cn } from "@/lib/utils";
 
-import { DropdownMenuContent } from "../dropdown-menu";
+import { DropdownMenuContent } from "./ui/dropdown-menu";
 import { LiquidGlass } from "./liquid-glass";
 
-type GlassDropdownMenuContentProps = React.ComponentProps<typeof DropdownMenuContent> &
+type GlassDropdownMenuContentProps = React.ComponentProps<
+  typeof DropdownMenuContent
+> &
   FrostGlassVariantProp & {
     glassClassName?: string;
   };

@@ -16,10 +16,11 @@ import {
   TerminalWindowIcon,
   TreeStructureIcon,
 } from "@phosphor-icons/react";
+import { Separator } from "./ui/separator";
 
 const About = () => {
   return (
-    <div id="about" className="w-full px-[12%] py-10 scroll-mt-20">
+    <div id="about" className="w-full sm:px-4 lg:px-2 py-10 scroll-mt-20">
       <motion.h4
         className="text-center mb-2 text-lg font-bricolage"
         variants={introVariant}
@@ -51,7 +52,7 @@ const About = () => {
       <div>
         <BentoGrid className="md:grid-cols-4 lg:grid-cols-6">
           <BentoGridItem
-            title="The Power of Collaboration"
+            title=""
             description={""}
             containerClassName="md:col-span-2 lg:col-span-2 md:row-span-2 lg:row-span-2"
           />
@@ -87,8 +88,17 @@ const About = () => {
             containerClassName="md:col-span-2 lg:col-span-1"
           />
           <BentoGridItem
-            title="The Power of Collaboration"
-            description="Enable real-time collaboration with your team."
+            title="Currently learning"
+            header={
+              <ul className="text-2xs lg:m-0">
+                <li>LLM integration patterns</li>
+                <Separator />
+                <li className="line-clamp-3">
+                  Evaluating & testing AI-powered applications
+                </li>
+                <Separator />
+              </ul>
+            }
             containerClassName="md:col-span-2 lg:col-span-1"
           />
           <BentoGridItem
