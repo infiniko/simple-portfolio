@@ -126,13 +126,13 @@ const Header = () => {
         </motion.div>
         <motion.h1
           variants={headingVariant}
-          className="text-3xl sm:text-6xl lg:text-[66px] font-bricolage text-secondary-foreground"
+          className="text-2xl sm:text-5xl lg:text-[52px] font-bricolage text-secondary-foreground"
         >
           crafting scalable web experiences
         </motion.h1>
         <motion.p
           variants={paraVariant}
-          className="max-w-2xl mx-auto font-bricolage"
+          className="max-w-2xl mx-auto font-bricolage text-card-content"
         >
           Creating high-performance, accessible web experiences. I love building
           scalable applications and solving complex frontend challenges.

@@ -15,7 +15,7 @@ const Projects = () => {
       id="projects"
       className="relative w-full px-[12%] py-10 scroll-mt-20 overflow-hidden"
     >
-      <StripedPattern className="-z-20 opacity-35 dark:opacity-50 text-[#6c185a]" />
+      <StripedPattern className="-z-20 opacity-40 dark:opacity-20 text-[#00ABAD]" />
       <motion.h4
         variants={introVariant}
         className="text-center mb-2 text-lg font-bricolage"

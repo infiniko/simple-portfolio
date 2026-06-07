@@ -6,6 +6,16 @@ import {
   ToolboxIcon,
   DesktopTowerIcon,
 } from "@phosphor-icons/react/dist/ssr";
+import {
+  BinaryIcon,
+  CodeIcon,
+  DevToLogoIcon,
+  GraphIcon,
+  PackageIcon,
+  StackOverflowLogoIcon,
+  TerminalWindowIcon,
+  TreeStructureIcon,
+} from "@phosphor-icons/react";
 export const navLinks = [
   { title: "Home", href: "/#top" },
   { title: "About me", href: "/#about" },
@@ -71,20 +81,29 @@ export const skillSet = [
   },
 ];
 
-export const aboutMe = [
+export const whatIDo = [
   {
-    id: 1,
-    title: "Interests",
-    description: ["UI/UX Design", "Gaming", "Travelling", "Music"],
+    number: "01",
+    title: "Frontend Engineering",
+    description:
+      "Scalable apps with React, Next.js & TypeScript from architecture to deployment.",
   },
   {
-    id: 2,
-    title: "Projects",
-    description: "7",
+    number: "02",
+    title: "Performance & State",
+    description:
+      "Optimizations & predictable data flows with Redux, Zustand & React Query.",
   },
   {
-    id: 3,
-    title: "Years of Experience",
-    description: "4+",
+    number: "03",
+    title: "Accessibility",
+    description:
+      "WCAG standards, semantic HTML & ARIA roles, so products work for everyone.",
+  },
+  {
+    number: "04",
+    title: "Mentorship & Code Review",
+    description:
+      "Growing juniors through pair programming and reviews focused on long-term quality.",
   },
 ];

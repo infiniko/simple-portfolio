@@ -36,7 +36,7 @@ const Navbar = () => {
                   <NavigationMenuLink
                     key={title}
                     asChild
-                    className="not-dark:hover:bg-primary-foreground duration-300"
+                    className="not-dark:hover:bg-accent duration-300"
                   >
                     <Link href={href}>{title}</Link>
                   </NavigationMenuLink>

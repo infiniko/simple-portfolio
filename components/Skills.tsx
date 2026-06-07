@@ -32,7 +32,7 @@ const Skills = () => {
   return (
     <div id="skills" className="relative w-full px-[12%] py-10 scroll-mt-20">
       <StripedPattern
-        className="-z-20 opacity-35 dark:opacity-50 text-[#6c185a]"
+        className="-z-20 opacity-40 dark:opacity-20 text-[#00ABAD]"
         direction="right"
       />
       <motion.h4
