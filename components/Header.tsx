@@ -5,6 +5,8 @@ import { Button } from "./ui/button";
 import { motion, Variants } from "framer-motion";
 import PixelBackground from "@/components/ui/pixel-background";
 import { FancyText } from "./ui/fancy-text";
+import Link from "next/link";
+import { GlassButton } from "./glass-button";
 
 const container = {
   hidden: {},
@@ -87,14 +89,14 @@ const btnVariant: Variants = {
 const Header = () => {
   return (
     <PixelBackground
-      className="fixed inset-0 w-full h-full -z-10"
+      className="fixed inset-0 w-full h-full"
       opacity={0.4}
       gap={8}
       colors="#a50036,#1a5f7a,#3b8ba8,#5eb3d6,#a8d8f0"
       direction="top"
     >
       <motion.div
-        className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-2 pt-10"
+        className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-2 pt-10 z-5"
         variants={container}
         initial="hidden"
         animate="show"
@@ -135,15 +137,15 @@ const Header = () => {
         </motion.h1>
         <motion.p
           variants={paraVariant}
-          className="max-w-2xl mx-auto font-bricolage text-card-content"
+          className="max-w-2xl mx-auto font-bricolage text-card-content mb-1"
         >
           Creating high-performance, accessible web experiences. I love building
           scalable applications and solving complex frontend challenges.
         </motion.p>
         <motion.div variants={btnVariant}>
-          <Button size={"lg"} className="rounded-full">
-            Some random button
-          </Button>
+          {/* <GlassButton>
+            <Link href="/#projects">View Work</Link>
+          </GlassButton> */}
         </motion.div>
       </motion.div>
     </PixelBackground>

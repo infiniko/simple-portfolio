@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="flex flex-col items-center w-full px-[12%] py-10 scroll-mt-20"
+      className="flex flex-col items-center w-full md:px-[12%] py-10 scroll-mt-20"
     >
       <motion.h4
         variants={introVariant}

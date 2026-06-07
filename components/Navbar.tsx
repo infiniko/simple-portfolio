@@ -7,6 +7,7 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
+  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import { navLinks } from "@/data";
@@ -36,7 +37,7 @@ const Navbar = () => {
                   <NavigationMenuLink
                     key={title}
                     asChild
-                    className="not-dark:hover:bg-accent duration-300"
+                    className={`not-dark:hover:bg-accent duration-300 ${navigationMenuTriggerStyle()}`}
                   >
                     <Link href={href}>{title}</Link>
                   </NavigationMenuLink>
@@ -46,7 +47,7 @@ const Navbar = () => {
             <NavigationMenuItem className="flex gap-2">
               <ThemeToggle />
               <div className="hidden lg:flex">
-                <GlassButton glassVariant="liquid-refract">
+                <GlassButton glassVariant="frosted">
                   <Link
                     className="flex items-center justify-center gap-2 px-2 mt-1 group/github"
                     target="_blank"

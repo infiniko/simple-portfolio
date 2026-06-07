@@ -4,13 +4,15 @@ import { assets } from "@/assets/assets";
 import {
   AtIcon,
   CopyrightIcon,
+  EnvelopeIcon,
+  GithubLogoIcon,
   HandHeartIcon,
   LaptopIcon,
   LinkedinLogoIcon,
 } from "@phosphor-icons/react";
 import { GlassSeparator } from "./glass-separator";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import SocialButtons from "./SocialButtons";
 const Footer = () => {
   return (
     <div className="mt-20">
@@ -22,35 +24,40 @@ const Footer = () => {
         </div>
       </div>
       <GlassSeparator glassVariant="subtle" />
-      <div className="text-center sm:flex items-end justify-between mt-12 px-5 pb-2">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5 justify-center md:mt-12 px-5 pb-2 text-xs">
         <div className="flex text-muted-foreground items-center gap-1">
-          <CopyrightIcon size={20} weight="duotone" /> 2026 A_A. All rights
-          reserved.
+          <CopyrightIcon size={18} weight="duotone" /> 2026 Abhishek Agrawal.
+          All rights reserved.
         </div>
-        <motion.div
-          className="mb-4 flex h-12 w-12 items-center justify-center border rounded-full"
-          whileHover={{ scale: 1.1, rotate: -5 }}
-          transition={{ type: "spring", stiffness: 400, damping: 15 }}
-        >
-          <LinkedinLogoIcon size={24} weight="duotone" />
-        </motion.div>
-        <div className="rounded-full border border-primary p-2 hover:-translate-y-2 hover:scale-110 duration-500 cursor-pointer">
-          <Link
-            href="https://linkedin.com/in/your-profile"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <LinkedinLogoIcon size={20} weight="duotone" />
-          </Link>
+        <div className="flex gap-4 justify-center">
+          <SocialButtons>
+            <Link
+              href="https://www.linkedin.com/in/abhishek-agrawal-fe/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LinkedinLogoIcon size={24} weight="duotone" />
+            </Link>
+          </SocialButtons>
+          <SocialButtons>
+            <Link target="_blank" href="https://github.com/infiniko/">
+              <GithubLogoIcon size={24} weight="duotone" />
+            </Link>
+          </SocialButtons>
+          <SocialButtons>
+            <Link href="mailto:abhishekacr@gmail.com">
+              <EnvelopeIcon size={24} weight="duotone" />
+            </Link>
+          </SocialButtons>
         </div>
-        <div className="text-muted-foreground flex flex-col items-center">
-          <span className="flex gap-2 items-center">
+        <div className="text-muted-foreground flex flex-col items-center justify-center">
+          <span className="flex gap-1 items-center">
             <HandHeartIcon size={24} weight="duotone" color="#EC003F" />
             Built with Next.js
           </span>
-          <span className="flex gap-2 items-center">
-            <LaptopIcon size={20} weight="duotone" /> Designed and developed by
-            Abhishek Agrawal.
+          <span className="flex gap-1 items-center justify-center">
+            <LaptopIcon size={18} weight="duotone" />
+            <span>Designed and developed by Abhishek Agrawal.</span>
           </span>
         </div>
       </div>
