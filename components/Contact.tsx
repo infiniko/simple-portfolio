@@ -14,7 +14,7 @@ const Contact = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}
-        className="text-center mb-2 text-lg font-bricolage"
+        className="text-center mb-2 text-lg font-bricolage text-card-content"
       >
         Connect with me
       </motion.h4>

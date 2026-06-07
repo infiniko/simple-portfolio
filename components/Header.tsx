@@ -107,7 +107,10 @@ const Header = () => {
             className="rounded-full w-32"
           />
         </motion.div>
-        <motion.h3 variants={greetingVariant} className="text-2xl ">
+        <motion.h3
+          variants={greetingVariant}
+          className="text-2xl text-card-content"
+        >
           Hi! I'm{" "}
           <span className="text-primary font-semibold font-bricolage tracking-wider">
             Abhishek

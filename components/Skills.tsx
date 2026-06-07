@@ -37,7 +37,7 @@ const Skills = () => {
       />
       <motion.h4
         variants={introVariant}
-        className="text-center mb-2 text-lg font-bricolage"
+        className="text-center mb-2 text-lg font-bricolage text-card-content"
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}

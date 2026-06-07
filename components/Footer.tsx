@@ -6,8 +6,11 @@ import {
   CopyrightIcon,
   HandHeartIcon,
   LaptopIcon,
+  LinkedinLogoIcon,
 } from "@phosphor-icons/react";
 import { GlassSeparator } from "./glass-separator";
+import Link from "next/link";
+import { motion } from "framer-motion";
 const Footer = () => {
   return (
     <div className="mt-20">
@@ -24,7 +27,22 @@ const Footer = () => {
           <CopyrightIcon size={20} weight="duotone" /> 2026 A_A. All rights
           reserved.
         </div>
-        <div></div>
+        <motion.div
+          className="mb-4 flex h-12 w-12 items-center justify-center border rounded-full"
+          whileHover={{ scale: 1.1, rotate: -5 }}
+          transition={{ type: "spring", stiffness: 400, damping: 15 }}
+        >
+          <LinkedinLogoIcon size={24} weight="duotone" />
+        </motion.div>
+        <div className="rounded-full border border-primary p-2 hover:-translate-y-2 hover:scale-110 duration-500 cursor-pointer">
+          <Link
+            href="https://linkedin.com/in/your-profile"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <LinkedinLogoIcon size={20} weight="duotone" />
+          </Link>
+        </div>
         <div className="text-muted-foreground flex flex-col items-center">
           <span className="flex gap-2 items-center">
             <HandHeartIcon size={24} weight="duotone" color="#EC003F" />

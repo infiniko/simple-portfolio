@@ -18,7 +18,7 @@ const Projects = () => {
       <StripedPattern className="-z-20 opacity-40 dark:opacity-20 text-[#00ABAD]" />
       <motion.h4
         variants={introVariant}
-        className="text-center mb-2 text-lg font-bricolage"
+        className="text-center mb-2 text-lg font-bricolage text-card-content"
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}

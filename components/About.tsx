@@ -11,11 +11,11 @@ const About = () => {
   return (
     <div id="about" className="w-full sm:px-4 lg:px-2 py-10 scroll-mt-20">
       <motion.h4
-        className="text-center mb-2 text-lg font-bricolage"
+        className="text-center mb-2 text-lg font-bricolage text-card-content"
         variants={introVariant}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
       >
         Introduction
       </motion.h4>
@@ -24,7 +24,7 @@ const About = () => {
         variants={headingVariant}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
       >
         About me
       </motion.h2>
@@ -78,7 +78,7 @@ const About = () => {
           />
           <BentoGridItem
             containerClassName=" md:col-span-4 lg:col-span-2"
-            title="Tools"
+            title="Ecosystem"
             header={<AboutToolOrbit />}
           />
         </BentoGrid>
