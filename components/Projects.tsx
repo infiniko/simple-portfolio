@@ -8,6 +8,7 @@ import { ArrowSquareUpRightIcon } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 import { headingVariant, introVariant, paraVariant } from "@/data/variants";
 import { StripedPattern } from "./magicui/striped-pattern";
+import Link from "next/link";
 
 const Projects = () => {
   return (
@@ -50,38 +51,26 @@ const Projects = () => {
             <article key={index} className="group relative">
               <GlassCard
                 glassVariant="clear"
-                className="transform group-hover:shadow-xl transition-shadow duration-500 p-0"
+                className="transform group-hover:shadow-xl transition-shadow duration-500"
               >
-                <CardContent className="p-0">
-                  <div className="relative h-64 md:h-84 overflow-hidden">
+                <CardContent className="">
+                  <div className="relative w-full aspect-video overflow-hidden  rounded-lg">
                     <Image
                       src={project.bgImage}
                       alt={project.title}
+                      unoptimized
+                      priority
                       fill
                       sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
-                      priority
-                      className="w-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                      className="object-cover transform group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
                 </CardContent>
                 <CardHeader>
                   <CardTitle>{project.title}</CardTitle>
-                  <CardContent className="text-muted-foreground">
-                    <p>{project.description}</p>
-                  </CardContent>
+                  <CardContent className="text-muted-foreground"></CardContent>
                 </CardHeader>
                 <GlassCardFooter className="flex gap-2">
-                  <GlassButton
-                    glassVariant="liquid"
-                    className="rounded-full hover:scale-105 transition-transform duration-500 group/open"
-                  >
-                    Open{" "}
-                    <ArrowSquareUpRightIcon
-                      size={24}
-                      weight="bold"
-                      className="group-hover/open:translate-x-0.5 transition-transform duration-500"
-                    />
-                  </GlassButton>
                   <GlassButton
                     glassVariant="liquid"
                     className="rounded-full hover:scale-105 transition-transform duration-500 group/open"
@@ -92,6 +81,24 @@ const Projects = () => {
                       weight="bold"
                       className="group-hover/open:translate-x-0.5 transition-transform duration-500"
                     />
+                  </GlassButton>
+                  <GlassButton
+                    glassVariant="liquid"
+                    className="rounded-full hover:scale-105 transition-transform duration-500 group/open"
+                  >
+                    <Link
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center gap-1"
+                    >
+                      Open{" "}
+                      <ArrowSquareUpRightIcon
+                        size={24}
+                        weight="bold"
+                        className="group-hover/open:translate-x-0.5 transition-transform duration-500"
+                      />
+                    </Link>
                   </GlassButton>
                 </GlassCardFooter>
               </GlassCard>

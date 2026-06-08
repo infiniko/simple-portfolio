@@ -94,23 +94,35 @@ export const whatIDo = [
 
 export const workData = [
   {
-    title: "Frontend project",
+    title: "Decora",
     description: "Web Design",
-    bgImage: "/work-1.png",
+    sourceCode: "",
+    liveLink: "https://decora-one.vercel.app/",
+    technologies: [],
+    bgImage: "/decora.png",
   },
   {
-    title: "Geo based app",
-    description: "Mobile App",
-    bgImage: "/work-2.png",
+    title: "Dashboard",
+    description: "analytics",
+    sourceCode: "",
+    liveLink: "https://analyticsdashboardpanel.netlify.app/dashboard",
+    technologies: [],
+    bgImage: "/dashboard.png",
   },
   {
     title: "Photography site",
     description: "Web Design",
+    sourceCode: "",
+    liveLink: "",
+    technologies: [],
     bgImage: "/work-3.png",
   },
   {
-    title: "UI/UX designing",
-    description: "UI/UX Design",
-    bgImage: "/work-4.png",
+    title: "upcoming soon",
+    description: "",
+    sourceCode: "",
+    liveLink: "",
+    technologies: [],
+    bgImage: "/projectLoading.svg",
   },
 ];
