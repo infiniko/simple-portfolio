@@ -1,6 +1,4 @@
 "use client";
-import Image from "next/image";
-import { assets } from "@/assets/assets";
 import {
   AtIcon,
   CopyrightIcon,
@@ -15,9 +13,8 @@ import Link from "next/link";
 import SocialButtons from "./SocialButtons";
 const Footer = () => {
   return (
-    <div className="mt-20">
+    <div className="mt-12">
       <div className="text-center">
-        <Image src={assets.logo} alt="" className="w-36 mx-auto mb-2" />
         <div className="w-max flex items-center gap-1 mx-auto">
           <AtIcon size={20} weight="duotone" />
           abhishekacr@gmail.com

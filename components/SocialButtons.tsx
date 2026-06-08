@@ -5,7 +5,8 @@ const SocialButtons = ({ children }: { children: React.ReactNode }) => {
     <motion.div
       className="mb-4 flex h-12 w-12 items-center justify-center border border-primary text-primary rounded-full hover:text-primary-foreground hover:bg-[#007E87] hover:border-[#007E87]"
       initial={{ scale: 0, rotate: -180 }}
-      animate={{ scale: 1, rotate: 0 }}
+      whileInView={{ scale: 1, rotate: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
       whileHover={{
         scale: 1.15,
         rotate: [0, -8, 8, -5, 5, 0],

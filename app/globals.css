@@ -50,9 +50,9 @@ html {
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
-  --color-card-highlight: var(--cardHighlightColor);
-  --color-card-shadow-hov: var(--card-shadow);
   --color-card-content: var(--card-content);
+  --color-header-btn: var(--header-button);
+
   @keyframes liquid-drift {
     0% {
       background-position:
@@ -108,9 +108,8 @@ html {
   --sidebar-ring: oklch(0.711 0.019 323.02);
   --background: oklch(0.98 0.005 200);
   --foreground: oklch(0.15 0.02 220);
-  --cardHighlightColor: #fffbfe;
-  --card-shadow: rgba(41, 16, 13, 0.12);
   --card-content: oklch(0.15 0.02 220);
+  --header-button: oklch(0.98 0.005 200);
 }
 
 .dark {
@@ -145,14 +144,14 @@ html {
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.542 0.034 322.5);
-  --cardHighlightColor: #2a1f2b;
-  --card-shadow: rgba(43, 13, 48, 0.02);
   --card-content: oklch(0.9 0.02 200);
+  --header-button: oklch(0.98 0.005 200);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    scrollbar-color: oklch(0.55 0.2 195) oklch(0.9 0.02 200);
   }
   body {
     @apply bg-background text-foreground;

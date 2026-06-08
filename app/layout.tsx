@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque, Outfit } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./theme-provider";
+import { Toaster } from "sonner";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -39,7 +40,20 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <main>{children}</main>
+          <Toaster
+            position="bottom-right"
+            toastOptions={{
+              style: {
+                background: "rgba(255, 255, 255, 0.06)",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+                backdropFilter: "blur(16px) saturate(1.8)",
+                WebkitBackdropFilter: "blur(16px) saturate(1.8)",
+                borderRadius: "16px",
+                color: "#009095",
+              },
+            }}
+          />
         </ThemeProvider>
       </body>
     </html>

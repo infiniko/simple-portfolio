@@ -28,7 +28,7 @@ const About = () => {
       >
         About me
       </motion.h2>
-      <div>
+      <div className="px-4">
         <BentoGrid className="md:grid-cols-4 lg:grid-cols-6">
           <BentoGridItem
             title=""

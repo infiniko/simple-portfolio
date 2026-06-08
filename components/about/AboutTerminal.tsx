@@ -6,7 +6,7 @@ import {
 
 const AboutTerminal = () => {
   return (
-    <Terminal>
+    <Terminal className="min-h-60">
       <TypingAnimation>npm info@latest init</TypingAnimation>
       <AnimatedSpan>∿ role : Frontend Developer</AnimatedSpan>
       <AnimatedSpan>

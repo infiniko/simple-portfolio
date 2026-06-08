@@ -1,5 +1,5 @@
 "use client";
-import { workData } from "@/assets/assets";
+import { workData } from "@/data";
 import { GlassCard, GlassCardFooter } from "./glass-card";
 import { CardContent, CardHeader, CardTitle } from "./ui/card";
 import Image from "next/image";

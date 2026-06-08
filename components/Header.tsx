@@ -1,12 +1,11 @@
 "use client";
-import { assets } from "@/assets/assets";
 import Image from "next/image";
-import { Button } from "./ui/button";
 import { motion, Variants } from "framer-motion";
 import PixelBackground from "@/components/ui/pixel-background";
 import { FancyText } from "./ui/fancy-text";
+import { ArrowSquareRightIcon, LinkedinLogoIcon } from "@phosphor-icons/react";
+import HeaderBtn from "./header/HeaderBtn";
 import Link from "next/link";
-import { GlassButton } from "./glass-button";
 
 const container = {
   hidden: {},
@@ -76,15 +75,26 @@ const paraVariant: Variants = {
   },
 };
 
-const btnVariant: Variants = {
-  hidden: { opacity: 0, y: 24, scale: 0.9 },
-  show: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: { type: "spring", stiffness: 220, damping: 8 },
+const btnVariant: Variants[] = [
+  {
+    hidden: { opacity: 0, x: -80, scale: 0.5 },
+    show: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+      transition: { type: "spring", stiffness: 100, damping: 8 },
+    },
   },
-};
+  {
+    hidden: { opacity: 0, x: 80, scale: 0.8 },
+    show: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+      transition: { type: "spring", stiffness: 60, damping: 12 },
+    },
+  },
+];
 
 const Header = () => {
   return (
@@ -96,7 +106,7 @@ const Header = () => {
       direction="top"
     >
       <motion.div
-        className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-2 pt-10 z-5"
+        className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-2 pt-5 z-5"
         variants={container}
         initial="hidden"
         animate="show"
@@ -104,9 +114,11 @@ const Header = () => {
       >
         <motion.div variants={profileVariant}>
           <Image
-            src={assets.profile_img}
+            src="/profile.png"
+            width={112}
+            height={112}
             alt="profile"
-            className="rounded-full w-32"
+            className="rounded-full w-32 ring-2 ring-teal-600"
           />
         </motion.div>
         <motion.h3
@@ -126,7 +138,7 @@ const Header = () => {
             duration={0.5}
             delay={0.2}
           >
-            frontend Engineer
+            frontend engineer
           </FancyText>
         </motion.div>
         <motion.h1
@@ -142,11 +154,37 @@ const Header = () => {
           Creating high-performance, accessible web experiences. I love building
           scalable applications and solving complex frontend challenges.
         </motion.p>
-        <motion.div variants={btnVariant}>
-          {/* <GlassButton>
-            <Link href="/#projects">View Work</Link>
-          </GlassButton> */}
-        </motion.div>
+        <div className="flex gap-4">
+          <motion.div variants={btnVariant[0]}>
+            <HeaderBtn>
+              <a href="/#projects" className="flex gap-1">
+                View Work
+                <ArrowSquareRightIcon
+                  weight="duotone"
+                  size={20}
+                  className="group-hover/icon:scale-125 group-hover/icon:translate-x-1 duration-500"
+                />
+              </a>
+            </HeaderBtn>
+          </motion.div>
+          <motion.div variants={btnVariant[1]}>
+            <HeaderBtn>
+              <Link
+                href="https://www.linkedin.com/in/abhishek-agrawal-fe/"
+                target="_blank"
+                rel="noreferrer"
+                className="flex gap-1"
+              >
+                <LinkedinLogoIcon
+                  weight="duotone"
+                  size={20}
+                  className="group-hover/icon:scale-125 group-hover/icon:-translate-x-1 duration-500"
+                />
+                <span>LinkedIn</span>
+              </Link>
+            </HeaderBtn>
+          </motion.div>
+        </div>
       </motion.div>
     </PixelBackground>
   );
