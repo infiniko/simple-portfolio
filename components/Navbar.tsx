@@ -20,7 +20,7 @@ const Navbar = () => {
     <>
       <nav>
         <NavigationMenu>
-          <NavigationMenuList className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-3 flex items-center justify-between z-50 navbar-scroll">
+          <NavigationMenuList className="w-full fixed px-0 lg:px-5 xl:px-[8%] py-3 flex items-center justify-between z-50 navbar-scroll">
             <NavigationMenuItem>
               <motion.div
                 whileHover={{ scale: 1.15 }}
@@ -41,7 +41,7 @@ const Navbar = () => {
                 </a>
               </motion.div>
             </NavigationMenuItem>
-            <NavigationMenuItem className="hidden md:flex items-center gap-8 lg:gap-8 rounded-full px-12 py-1 menu-scroll">
+            <NavigationMenuItem className="hidden md:flex items-center gap-3 lg:gap-8 rounded-full px-12 py-1 menu-scroll">
               {navLinks.map(({ title, href }) => {
                 return (
                   <NavigationMenuLink
@@ -56,22 +56,20 @@ const Navbar = () => {
             </NavigationMenuItem>
             <NavigationMenuItem className="flex gap-2">
               <ThemeToggle />
-              <div className="hidden lg:flex">
-                <GlassButton glassVariant="liquid-refract">
-                  <Link
-                    className="flex items-center justify-center mt-1 group/github"
-                    target="_blank"
-                    href="https://github.com/infiniko/"
-                  >
-                    Github
-                    <GithubLogoIcon
-                      size={32}
-                      weight="duotone"
-                      className="transition-transform duration-500 group-hover/github:scale-125"
-                    />
-                  </Link>
-                </GlassButton>
-              </div>
+              <GlassButton glassVariant="liquid-refract">
+                <Link
+                  className="flex items-center justify-center mt-1 group/github"
+                  target="_blank"
+                  href="https://github.com/infiniko/"
+                >
+                  <span className="hidden lg:flex">Github</span>
+                  <GithubLogoIcon
+                    size={32}
+                    weight="duotone"
+                    className="transition-transform duration-500 group-hover/github:scale-125"
+                  />
+                </Link>
+              </GlassButton>
               <div className="flex md:hidden">
                 <RightSideDrop />
               </div>
